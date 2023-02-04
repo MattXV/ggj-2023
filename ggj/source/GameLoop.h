@@ -1,13 +1,15 @@
 #pragma once
 
 
-#include <SDL.h>
+#include "Render.h"
 #include <iostream>
+
+#include "Scene.h"
 
 class GameLoop
 {
 public:
-	GameLoop(int width, int height);
+	GameLoop();
 	~GameLoop();
 
 	void render();
@@ -16,7 +18,6 @@ public:
 
 
 private:
-	SDL_Renderer* m_renderer = nullptr;
-	SDL_Window* m_window = nullptr;
+	Scene scene;
 };
 
